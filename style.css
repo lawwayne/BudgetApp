@@ -13,7 +13,7 @@
   }
   
   body {
-    color: rgb(100, 140, 250);
+    color: rgb(54, 58, 70);
     font-family: Open Sans;
     font-size: 16px;
     position: relative;
@@ -32,18 +32,10 @@
   }
   
   /* Upper Section of teh page which contain the graph */
-
-  .header img{
-    float: left;
-    height:70px;
-    width:110%;
-    margin:-10px;
-    background: #555;
-  }
   
   .top {
-    height: 40vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    height: 50vh;
+    background-image: linear-gradient(rgba(201, 171, 72, 0.774), rgba(201, 171, 72, 0.774)),
       url("back.png");
     background-size: cover;
     background-position: center;
@@ -51,12 +43,14 @@
   }
   
   .budget {
-    position: absolute;
     width: 350px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(192, 188, 188);
+    color: darkslategrey;
+    float: left;
+    margin-left: 400px;
+    margin-top: 135px;
   }
   
   .budget__title {
@@ -82,11 +76,11 @@
   
   .budget__income {
     margin-bottom: 10px;
-    background-color: #2c65cf;
+    background-color: #2d7eb4ef;
   }
   
   .budget__expenses {
-    background-color: #f7261f;
+    background-color: #dd6662;
   }
   
   .budget__income--text,
@@ -128,16 +122,16 @@
   }
   
   .add__container {
-    margin: 0 auto;
+    margin: 10px;
     text-align: center;
   }
   
   .add__type {
-    width: 55px;
+    width: 88px;
     border: 1px solid #e7e7e7;
     height: 44px;
     font-size: 18px;
-    color: inherit;
+    color: darkslategrey;
     background-color: #fff;
     margin-right: 10px;
     font-weight: 300;
@@ -148,7 +142,7 @@
   .add__value {
     border: 1px solid #e7e7e7;
     background-color: #fff;
-    color: inherit;
+    color: darkslategrey;
     font-family: inherit;
     font-size: 14px;
     padding: 12px 15px;
@@ -200,11 +194,10 @@
   .income {
     float: left;
     width: 475px;
-    margin-right: 50px;
   }
   
   .expenses {
-    float: left;
+    float: right;
     width: 475px;
   }
   
@@ -216,10 +209,10 @@
   }
   
   .icome__title {
-    color: #28b9b5;
+    color: #2d7eb4ef;
   }
   .expenses__title {
-    color: #ff5049;
+    color: #dd6662;
   }
   
   .item {
@@ -257,13 +250,13 @@
   
   .income .item__value,
   .income .item__delete--btn {
-    color: #28b9b5;
+    color: #2d7eb4ef;
   }
   
   .expenses .item__value,
   .expenses .item__percentage,
   .expenses .item__delete--btn {
-    color: #ff5049;
+    color: #dd6662;
   }
   
   .item__delete {
@@ -313,13 +306,29 @@
   
   .clear-button {
     text-transform: uppercase;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 0;
-    background-color: white;
+    background-color: rgb(119, 172, 136);
     padding: 12px;
     transition-duration: 0.4s;
+    margin-bottom: 10px;
+    border-radius: 8px;
   }
   .clear-button:hover {
       background-color: #888888;
       color: white;
     }
+
+header {
+    height: 18vh;
+    background-color: darkslategrey;
+    color: goldenrod;
+    text-align: center;
+}
+
+footer {
+    height: 8vh;
+    background-color: darkslategrey;
+    color: goldenrod;
+    text-align: center;
+}
