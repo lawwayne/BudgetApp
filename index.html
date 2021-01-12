@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" href="assets/style.css" />
+  <title>Budget App</title>
+</head>
+
+<body>
+  <div class="top">
+    <div class="budget">
+      <div class="budget__title">
+        Available Budget in <span class="budget__title--month">%Month%</span>:
+      </div>
+
+      <div class="budget__value">+ 2,345.64</div>
+
+      <div class="budget__income clearfix">
+        <div class="budget__income--text">Income</div>
+        <div class="right">
+          <div class="budget__income--value">+ 4,300.00</div>
+          <div class="budget__income--percentage">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="budget__expenses clearfix">
+        <div class="budget__expenses--text">Expenses</div>
+        <div class="right clearfix">
+          <div class="budget__expenses--value">- 1,954.36</div>
+          <div class="budget__expenses--percentage">45%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="add">
+      <div class="add__container">
+        <select class="add__type">
+          <option value="inc" selected>Income</option>
+          <option value="exp">Outcome</option>
+        </select>
+        <input type="text" class="add__description" placeholder="Add description" />
+        <input type="number" step="50" class="add__value" placeholder="Value" />
+        <button class="add__btn">
+          <i class="ion-ios-checkmark-outline"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="container clearfix">
+      <div class="income">
+        <h2 class="icome__title">Income</h2>
+
+        <div class="income__list">
+          
+        </div>
+      </div>
+
+      <div class="expenses">
+        <h2 class="expenses__title">Expenses</h2>
+
+        <div class="expenses__list">
+         
+        </div>
+      </div>
+    </div>
+
+    
+    <center><button onclick="clearEverything()" class="clear-button">Clear all</button></center>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+
+</html>
