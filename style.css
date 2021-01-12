@@ -32,6 +32,14 @@
   }
   
   /* Upper Section of teh page which contain the graph */
+
+  .header img{
+    float: left;
+    height:70px;
+    width:110%;
+    margin:-10px;
+    background: #555;
+  }
   
   .top {
     height: 40vh;
