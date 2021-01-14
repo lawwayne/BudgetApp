@@ -24,17 +24,28 @@ body {
 .right {
   float: right;
 }
+
+
+.red {
+  color: hsl(2, 92%, 51%) !important;
+}
+
+.red-focus:focus {
+  border: 1px solid hsl(2, 92%, 51%) !important;
+=======
 .red {
   color: hsl(2, 92%, 51%) !important;
 }
 .red-focus:focus {
   border: 1px solid #hsl(2, 92%, 51%) !important;
+
 }
 
 /* Upper Section of teh page which contain the graph */
 
 .top {
   height: 75vh;
+
   background-image: linear-gradient(#ffd166, #ffd166),
     url("back.png");
   background-size: cover;
@@ -119,7 +130,9 @@ body {
 .add {
   padding: 14px;
   border-bottom: 1px solid #e7e7e7;
-  background-color: rgb(230, 247, 242);
+
+  background-color: #f7f7f7;
+
 }
 
 .add__container {
@@ -128,6 +141,7 @@ body {
 }
 
 .add__type {
+
   width: 95px;
   border: 1px solid rgb(198, 226, 218);
   border-radius: 5px;
@@ -135,6 +149,7 @@ body {
   font-size: 18px;
   color: darkslategrey;
   background-color: white;
+
   margin-right: 10px;
   font-weight: 300;
   transition: border 0.3s;
@@ -142,10 +157,12 @@ body {
 
 .add__description,
 .add__value {
+
   border: 1px solid rgb(198, 226, 218);
   background-color: white;
   color: darkslategrey;
   font-family: Open Sans;
+  
   font-size: 14px;
   padding: 12px 15px;
   margin-right: 10px;
@@ -156,6 +173,7 @@ body {
 .add__description {
   width: 400px;
 }
+
 .add__value {
   width: 100px;
 }
@@ -194,11 +212,13 @@ body {
 }
 
 .income {
+
   float: left;
   width: 475px;
 }
 
 .expenses {
+
   float: right;
   width: 475px;
 }
@@ -208,11 +228,13 @@ h2 {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 15px;
+
 }
 
 .icome__title {
   color: #2d7eb4ef;
 }
+
 .expenses__title {
   color: #dd6662;
 }
@@ -225,6 +247,7 @@ h2 {
 .item:first-child {
   border-top: 1px solid #e7e7e7;
 }
+
 .item:nth-child(even) {
   background-color: #f7f7f7;
 }
@@ -279,6 +302,7 @@ h2 {
 .item__delete--btn:focus {
   outline: none;
 }
+
 .item__delete--btn:active {
   transform: translateY(2px);
 }
@@ -286,9 +310,11 @@ h2 {
 .item:hover .item__delete--btn {
   display: block;
 }
+
 .item:hover .item__value {
   transform: translateX(-20px);
 }
+
 .item:hover .item__percentage {
   transform: translateX(-20px);
 }
@@ -302,6 +328,7 @@ h2 {
 .unpaid .item__percentage {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
 }
+
 .unpaid:hover .item__description {
   font-weight: 900;
 }
@@ -316,10 +343,12 @@ h2 {
   margin-bottom: 20px;
   border-radius: 8px;
 }
+
 .clear-button:hover {
     background-color: #888888;
     color: white;
   }
+
 
 nav {
   margin-bottom: -0.7rem;
@@ -328,8 +357,10 @@ nav {
 }
 
 nav a {
+
 color:goldenrod;
 font-size: 25px;
+
 }
 
 nav .navbar-brand {
@@ -339,7 +370,9 @@ font-weight: 1000;
 }
 
 footer {
+
   padding-top: 10px;
+
   height: 8vh;
   background-color: darkslategrey;
   color: goldenrod;
@@ -354,6 +387,7 @@ footer {
 }
 
 #myBtn {
+
 display: none;
 position: fixed;
 bottom: 20px;
@@ -371,4 +405,5 @@ border-radius: 4px;
 
 #myBtn:hover {
 background-color: #555;
+
 }
