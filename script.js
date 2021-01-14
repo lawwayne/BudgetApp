@@ -489,7 +489,7 @@ var Controller = (function (budgetCtrl, UICtrl) {
 
     return {
         init: function () {
-            console.log("Application has been started");
+            console.log("Application has been started!");
             UICtrl.displayBudget({
                 budget: 0,
                 percentage: -1,
@@ -507,7 +507,7 @@ var Controller = (function (budgetCtrl, UICtrl) {
                 UICtrl.prepareUI(preparedData);
                 console.log("Locally stored data:",localData);
             }else
-                console.log("Couldn't find any local data !");
+                console.log("Couldn't find any local data!");
             
         },
     };
@@ -517,7 +517,7 @@ Controller.init();
 
 
 function clearEverything(){
-    if(confirm("This will clear all the data on this page permanently\n Are you sure?"))
+    if(confirm("This will clear all your data and inputs you have entered in EveryCent\n Are you sure?"))
         budgetController.clearLocalData();
 }
 
@@ -539,3 +539,28 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+new Chart(document.getElementById("pie-chart"), {
+    type: 'pie',
+    data: {
+    labels: ["Rent", "Food", "Travel", "Shopping", "Invest", "Utilities", "Groceries"],
+    datasets: [{
+        label: "Expenses",
+        backgroundColor: ["#ffa69e","#faf3dd","#b8f2e6","#aed9e0","#5e6472","#9c89b8","#619b8a"],
+        data: [1500,400,240,890,320,120,220]
+    }]
+    },
+    options: {
+    title: {
+        display: true,
+        text: 'Expenses:',
+        fontFamily: 'Open Sans',
+        fontSize: 18,
+    },
+    legend: {
+        position: 'right',
+        fontFamily: 'Open Sans'
+    }
+    }
+});

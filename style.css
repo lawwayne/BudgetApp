@@ -25,18 +25,27 @@ body {
   float: right;
 }
 
+
 .red {
   color: hsl(2, 92%, 51%) !important;
 }
 
 .red-focus:focus {
   border: 1px solid hsl(2, 92%, 51%) !important;
+=======
+.red {
+  color: hsl(2, 92%, 51%) !important;
+}
+.red-focus:focus {
+  border: 1px solid #hsl(2, 92%, 51%) !important;
+
 }
 
 /* Upper Section of teh page which contain the graph */
 
 .top {
-  height: 35vh;
+  height: 75vh;
+
   background-image: linear-gradient(#ffd166, #ffd166),
     url("back.png");
   background-size: cover;
@@ -121,7 +130,9 @@ body {
 .add {
   padding: 14px;
   border-bottom: 1px solid #e7e7e7;
+
   background-color: #f7f7f7;
+
 }
 
 .add__container {
@@ -130,12 +141,15 @@ body {
 }
 
 .add__type {
-  width: 88px;
-  border: 1px solid #e7e7e7;
+
+  width: 95px;
+  border: 1px solid rgb(198, 226, 218);
+  border-radius: 5px;
   height: 44px;
   font-size: 18px;
   color: darkslategrey;
-  background-color: #fff;
+  background-color: white;
+
   margin-right: 10px;
   font-weight: 300;
   transition: border 0.3s;
@@ -143,10 +157,12 @@ body {
 
 .add__description,
 .add__value {
-  border: 1px solid #e7e7e7;
-  background-color: #fff;
+
+  border: 1px solid rgb(198, 226, 218);
+  background-color: white;
   color: darkslategrey;
-  font-family: inherit;
+  font-family: Open Sans;
+  
   font-size: 14px;
   padding: 12px 15px;
   margin-right: 10px;
@@ -196,15 +212,13 @@ body {
 }
 
 .income {
-  border-style: groove;
-  border-color: #28b9b5;
+
   float: left;
   width: 475px;
 }
 
 .expenses {
-  border-style: groove;
-  border-color: #ff5049;
+
   float: right;
   width: 475px;
 }
@@ -214,7 +228,7 @@ h2 {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 15px;
-  text-align: center;
+
 }
 
 .icome__title {
@@ -331,9 +345,10 @@ h2 {
 }
 
 .clear-button:hover {
-  background-color: #888888;
-  color: white;
-}
+    background-color: #888888;
+    color: white;
+  }
+
 
 nav {
   margin-bottom: -0.7rem;
@@ -342,46 +357,53 @@ nav {
 }
 
 nav a {
-  color: goldenrod;
-  font-size: 25px;
+
+color:goldenrod;
+font-size: 25px;
+
 }
 
 nav .navbar-brand {
-  color: goldenrod;
-  font-size: 30px;
-  font-weight: 1000;
+color: goldenrod;
+font-size: 30px;
+font-weight: 1000;
 }
 
 footer {
+
+  padding-top: 10px;
+
   height: 8vh;
   background-color: darkslategrey;
   color: goldenrod;
   text-align: center;
 }
 
-#piechart {
+.piechart {
   float: right;
+  margin-left: -20rem;
   margin-top: 60px;
-  margin-left: -10rem;
-  margin-right: 100px;
+  margin-right: 170px;
 }
 
 #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #2d7eb4ef;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+
+display: none;
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+font-size: 18px;
+border: none;
+outline: none;
+background-color:#2d7eb4ef;
+color: white;
+cursor: pointer;
+padding: 15px;
+border-radius: 4px;
 }
 
 #myBtn:hover {
-  background-color: #555;
+background-color: #555;
+
 }
