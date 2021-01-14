@@ -489,7 +489,7 @@ var Controller = (function (budgetCtrl, UICtrl) {
 
     return {
         init: function () {
-            console.log("Application has been started");
+            console.log("Application has been started!");
             UICtrl.displayBudget({
                 budget: 0,
                 percentage: -1,
@@ -507,7 +507,7 @@ var Controller = (function (budgetCtrl, UICtrl) {
                 UICtrl.prepareUI(preparedData);
                 console.log("Locally stored data:",localData);
             }else
-                console.log("Couldn't find any local data !");
+                console.log("Couldn't find any local data!");
             
         },
     };
