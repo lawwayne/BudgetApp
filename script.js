@@ -517,7 +517,7 @@ Controller.init();
 
 
 function clearEverything(){
-    if(confirm("This will clear all the data on this page permanently\n Are you sure?"))
+    if(confirm("This will clear all your data and inputs you have entered in EveryCent\n Are you sure?"))
         budgetController.clearLocalData();
 }
 
