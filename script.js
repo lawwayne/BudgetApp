@@ -539,3 +539,51 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// google.charts.load('current', {'packages':['corechart']});
+// google.charts.setOnLoadCallback(drawChart);
+// let descriptionInput = document.querySelector(".add__description"); 
+// let addForm = document.querySelector(".add");
+// addForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+    
+//     let description = e.target.description.value;
+//     let addValue = e.target.addValue.value;
+//     console.log("function fired", description, addValue);
+//     debugger;
+//     var data = google.visualization.arrayToDataTable([
+//         ['category', 'expense'],
+//         [description, addValue] 
+//         ]);
+
+//         // Optional; add a title and set the width and height of the chart
+//         var options = {'title':'Expenses: ', 'width':550, 'height':350, 'backgroundColor':'#ffd166', 'fontSize':20, 'fontName':'Open Sans',};
+      
+//         // Display the chart inside the <div> element with id="piechart"
+//         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+//         chart.draw(data, options);
+// })
+
+new Chart(document.getElementById("pie-chart"), {
+    type: 'pie',
+    data: {
+    labels: ["Rent", "Food", "Travel", "Shopping", "Invest", "Utilities", "Groceries"],
+    datasets: [{
+        label: "Expenses",
+        backgroundColor: ["#ffa69e","#faf3dd","#b8f2e6","#aed9e0","#5e6472","#9c89b8","#619b8a"],
+        data: [1500,400,240,890,320,120,220]
+    }]
+    },
+    options: {
+    title: {
+        display: true,
+        text: 'Expenses:',
+        fontFamily: 'Open Sans',
+        fontSize: 18,
+    },
+    legend: {
+        position: 'right',
+        fontFamily: 'Open Sans'
+    }
+    }
+});
