@@ -489,7 +489,7 @@ var Controller = (function (budgetCtrl, UICtrl) {
 
     return {
         init: function () {
-            console.log("Application has been started");
+            console.log("Application has been started!");
             UICtrl.displayBudget({
                 budget: 0,
                 percentage: -1,
@@ -507,7 +507,7 @@ var Controller = (function (budgetCtrl, UICtrl) {
                 UICtrl.prepareUI(preparedData);
                 console.log("Locally stored data:",localData);
             }else
-                console.log("Couldn't find any local data !");
+                console.log("Couldn't find any local data!");
             
         },
     };
@@ -517,7 +517,7 @@ Controller.init();
 
 
 function clearEverything(){
-    if(confirm("This will clear all the data on this page permanently\n Are you sure?"))
+    if(confirm("This will clear all your data and inputs you have entered in EveryCent\n Are you sure?"))
         budgetController.clearLocalData();
 }
 
@@ -540,29 +540,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-// google.charts.load('current', {'packages':['corechart']});
-// google.charts.setOnLoadCallback(drawChart);
-// let descriptionInput = document.querySelector(".add__description"); 
-// let addForm = document.querySelector(".add");
-// addForm.addEventListener("submit", (e) => {
-//     e.preventDefault();
-    
-//     let description = e.target.description.value;
-//     let addValue = e.target.addValue.value;
-//     console.log("function fired", description, addValue);
-//     debugger;
-//     var data = google.visualization.arrayToDataTable([
-//         ['category', 'expense'],
-//         [description, addValue] 
-//         ]);
-
-//         // Optional; add a title and set the width and height of the chart
-//         var options = {'title':'Expenses: ', 'width':550, 'height':350, 'backgroundColor':'#ffd166', 'fontSize':20, 'fontName':'Open Sans',};
-      
-//         // Display the chart inside the <div> element with id="piechart"
-//         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-//         chart.draw(data, options);
-// })
 
 new Chart(document.getElementById("pie-chart"), {
     type: 'pie',

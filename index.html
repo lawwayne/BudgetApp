@@ -77,7 +77,7 @@
       </div>
 
       <div class="budget__expenses clearfix">
-        <div class="budget__expenses--text">Expenses</div>
+        <div class="budget__expenses--text">Expenditure</div>
         <div class="right clearfix">
           <div class="budget__expenses--value"></div>
           <div class="budget__expenses--percentage"></div>
@@ -87,6 +87,7 @@
     <div class="piechart">
         <canvas id="pie-chart" width="400" height="300"></canvas>
     </div>
+
   </div>
   
   <div style="height:20vh; background-color: #ffd166; text-align: center; ">
@@ -98,6 +99,7 @@
       <form class="add__container">
         <select class="add__type">
           <option value="inc" selected>Income</option>
+
           <option class="deduct" value="exp">Expense</option>
         </select>
         <select class="add__description" id="">
@@ -110,6 +112,7 @@
           <option id="invest">Investment</option>
           <option id="utili">Utilities</option>
           <option id="grocery">Groceries</option>
+
         </select>
         <input type="number" step="50" class="add__value" placeholder="Amount" />
         <button class="add__btn" onclick="drawChart()">
@@ -120,15 +123,15 @@
 
     <div class="container clearfix">
       <div class="income">
-        <h2 class="icome__title">Income</h2>
+        <h2 class="income__title">Income</h2>
 
         <div class="income__list">
           
         </div>
       </div>
 
-      <div class="expenses">
-        <h2 class="expenses__title">Expenses</h2>
+      <div class="expenditure">
+        <h2 class="expenses__title">Expenditure</h2>
 
         <div class="expenses__list">
          
