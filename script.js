@@ -539,3 +539,28 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+new Chart(document.getElementById("pie-chart"), {
+    type: 'pie',
+    data: {
+    labels: ["Rent", "Food", "Travel", "Shopping", "Invest", "Utilities", "Groceries"],
+    datasets: [{
+        label: "Expenses",
+        backgroundColor: ["#ffa69e","#faf3dd","#b8f2e6","#aed9e0","#5e6472","#9c89b8","#619b8a"],
+        data: [1500,400,240,890,320,120,220]
+    }]
+    },
+    options: {
+    title: {
+        display: true,
+        text: 'Expenses:',
+        fontFamily: 'Open Sans',
+        fontSize: 18,
+    },
+    legend: {
+        position: 'right',
+        fontFamily: 'Open Sans'
+    }
+    }
+});
