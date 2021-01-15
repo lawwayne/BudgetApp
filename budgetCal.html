@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>50/30/20 Calculator</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+    <style>
+        body {
+            background-color: #ffd166;
+        }
+
+        .panel {
+            max-width: 650px;
+            margin: 0 auto;
+            margin-top: 2rem;
+            border: 10px solid #0f8f48;
+            border-radius: 10%;
+            padding: 2rem;
+            text-align: center;
+            background-color: #bee9ba;
+        }
+
+        table {
+            border: 2px solid #52500d;
+            border-radius: 25%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            visibility: hidden;
+            /* width: 10rem;*/
+
+
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            background-color: #9cd6cc;
+
+        }
+
+        td {
+            text-align: right;
+            padding: 1rem;
+            /* background-color: grey;*/
+        }
+
+        tr:nth-child(even) {
+            background-color: #ffd166;
+        }
+
+        input[type=text] {
+            padding: 5px;
+            border: none;
+            border-radius: 2px;
+            height: 30px;
+            width: 150px;
+        }
+
+        input[type=submit] {
+            /* border: 2px solid #501c29;*/
+            border: 1px solid #859400;
+            border-radius: 5.5px;
+            background-color: #ffd166;
+            padding: 0.3rem;
+            -webkit-transition: background-color 2s;
+            transition: background-color 2s;
+
+        }
+
+        input[type=submit]:hover {
+            background-color: #ffd166;
+            color: #f2f2f2;
+        }
+        
+        .center {
+            margin: auto;
+            display: block;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="logo.png"
+                height="60"
+                alt=""
+                loading="lazy"
+              />
+              EveryCent
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="budgetCalculator.html">Calculator</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">Profile
+                    <i></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <div class="panel">
+        <h1>50/30/20 Budget Calculator</h1>
+        <p><i>This is a bugeting calculator that is based on the 50/30/20 investment.
+                50% of your budget goes toward needs such as grocerries and bills. 30%
+                of the it can go toward things that you want and 20% going toward savings.
+
+            </i> </p>
+        <label>Pay After Taxes: </label>
+        <input type="text" id="takehome" name="takehome" placeholder="Enter Income">
+        <input type="submit" onclick="SavingsCal()" value="Calculate" />
+        <!-- <button type="submit" onclick="clear()">reset</button>-->
+        <br><br>
+        <table id="table">
+            <tr>
+                <th>Income</th>
+                <td id="output_pay"></td>
+            </tr>
+            <tr>
+                <th>Needs</th>
+                <td id="output_needs"></td>
+            </tr>
+            <tr>
+                <th>Wants</th>
+                <td id="output_wants"></td>
+            </tr>
+            <tr>
+                <th>Savings</th>
+                <td id="output_saving"></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <img class="center" src="503020.png" alt="budget rule">
+
+
+    <script>
+
+        /*document.getElementById('reset').onclick = function () {
+            takehome.innerHTML = "";
+        }*/
+
+
+        function SavingsCal() {
+            let takehome = document.getElementById('takehome').value;
+            let pay = parseFloat(takehome);
+            let n = pay * (50 / 100);
+            let w = pay * (30 / 100);
+            let s = pay * (20 / 100);
+            /*let needs = n.toFixed(2);
+            let wants = w.toFixed(2);
+            let savings = s.toFixed(2);*/
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 2
+            })
+            let paid = formatter.format(pay);
+            let needs = formatter.format(n);
+            let wants = formatter.format(w);
+            let savings = formatter.format(s);
+            //return savings;
+
+            if (isNaN(pay)) {
+                alert("Enter a valid number")
+
+            }
+
+            else {
+                /*alert(`needs: ${needs} wants: ${wants} savings: ${savings}`);
+                let output = document.getElementById('output').innerHTML = 
+                `needs: ${needs} wants: ${wants} savings: ${savings}`;*/
+                let table = document.getElementById('table');
+                table.style.visibility = "visible";
+                let output_pay = document.getElementById('output_pay').innerHTML = paid;
+                let output_needs = document.getElementById('output_needs').innerHTML = needs;
+                let output_wants = document.getElementById('output_wants').innerHTML = wants;
+                let output_saving = document.getElementById('output_saving').innerHTML = savings;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
